@@ -1,14 +1,17 @@
 package kz.kakimzhanova.book.entity;
 
+import kz.kakimzhanova.book.util.IdGenerator;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
 public class Library {
-    private List<Book> books = new ArrayList<Book>();
+    private long libraryId;
+    private List<Book> books = new ArrayList<>();
 
     public Library(){
-
+        this.libraryId = IdGenerator.generateLibraryId();
     }
 
     public void addBook(Book book) {

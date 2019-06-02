@@ -1,10 +1,11 @@
 package kz.kakimzhanova.book.entity;
 
+import kz.kakimzhanova.book.util.IdGenerator;
+
 import java.math.BigDecimal;
 
 public class Book {
-    private static int bookCount = 0;
-    private int bookId;
+    private long bookId;
     private String name;
     private String[] authors;
     private String publishingHouse;
@@ -17,7 +18,7 @@ public class Book {
                 String publishingHouse, int publishingYear,
                 int pagesQuantity, double price, String bindingType){
 
-        this.bookId = ++bookCount;
+        this.bookId = IdGenerator.generateBookId();
         this.name = name;
         this.authors = authors;
         this.publishingHouse = publishingHouse;
@@ -32,7 +33,7 @@ public class Book {
                 int pagesQuantity, double price, String bindingType){
         String[] newAuthors = {author};
 
-        this.bookId = ++bookCount;
+        this.bookId = IdGenerator.generateBookId();
         this.name = name;
         this.authors = newAuthors;
         this.publishingHouse = publishingHouse;
