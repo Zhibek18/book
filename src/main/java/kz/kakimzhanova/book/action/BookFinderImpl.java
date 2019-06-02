@@ -3,7 +3,7 @@ package kz.kakimzhanova.book.action;
 import kz.kakimzhanova.book.entity.Book;
 import kz.kakimzhanova.book.entity.Library;
 
-public class LibraryAction {
+public class BookFinderImpl implements BookFinder{
     public Library writtenBy(Library bookArr, String author){
         Library authorBooks = new Library();
         for (Book book : bookArr.getBooks()){

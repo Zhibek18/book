@@ -1,6 +1,6 @@
 package kz.kakimzhanova.book.main;
 
-import kz.kakimzhanova.book.action.LibraryAction;
+import kz.kakimzhanova.book.action.BookFinderImpl;
 import kz.kakimzhanova.book.entity.Book;
 import kz.kakimzhanova.book.entity.Library;
 
@@ -15,7 +15,7 @@ public class Main {
         ourBooks.addBook(myBook);
         ourBooks.addBook(yourBook);
         ourBooks.addBook(hisBook);
-        LibraryAction libraryAction = new LibraryAction();
+        BookFinderImpl libraryAction = new BookFinderImpl();
         System.out.println("writtenBy:\n" + libraryAction.writtenBy(ourBooks, "Л.Н.Толстой"));
         System.out.println("publishedBy:\n" + libraryAction.publishedBy(ourBooks, "АСТ"));
         System.out.println("publishedSince:\n" + libraryAction.publishedSince(ourBooks, 2000));
